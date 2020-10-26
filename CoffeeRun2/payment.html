@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel = "stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form payment-handler="form">
+                <h1>Payment form</h1>
+                <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+                    <section>
+                        <h2>Contact information</h2>
+                        <fieldset>
+                        <legend>Title</legend>
+                        </fieldset>
+                        <p>
+                        <label for="name">
+                            <span>Name: </span>
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <input type="text" id="name" name="username">
+                        </p>
+                        <p>
+                        <label for="mail">
+                            <span>E-mail: </span>
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <input type="email" id="mail" name="usermail">
+                        </p>
+                        <p>
+                        <label for="pwd">
+                            <span>Password: </span>
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <input type="password" id="pwd" name="password">
+                    </section>
+                    <section>
+                        <h2>Payment information</h2>
+                        <p>
+                        <label for="card">
+                            <span>Card type:</span>
+                        </label>
+                        <select id="card" name="usercard">
+                            <option value="visa">Visa</option>
+                            <option value="mc">Mastercard</option>
+                            <option value="amex">American Express</option>
+                        </select>
+                        </p>
+                        <p>
+                        <label for="number">
+                            <span>Card number:</span>
+                            <strong><abbr title="required">*</abbr></strong>
+                        </label>
+                        <input type="tel" id="number" name="cardnumber">
+                        </p>
+                        <p>
+                        <label for="date">
+                            <span>Expiration date:</span>
+                            <strong><abbr title="required">*</abbr></strong>
+                            <em>formatted as mm/dd/yyyy</em>
+                        </label>
+                        <input type="date" id="date" name="expiration">
+                        </p>
+                    </section>
+                </p>
+            </form>
+        </div>
+    </div>
+        <p> <button type="paySubmit" class="btn btn-default">Validate the payment</button> </p>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+        <script src="scripts/payformhandler.js" charset="utf-8"></script>
+        <script src="scripts/main.js" charset="utf-8"></script>
+ </body>
+</html>
